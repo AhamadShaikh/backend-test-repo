@@ -23,7 +23,7 @@ router.post("/blogs", middleware, async (req, res) => {
 router.get("/blogs", middleware, async (req, res) => {
     try {
 
-        const blogs = await Blogs.find({ creator: req.params._id })
+        const blogs = await Blogs.find({})
 
         res.status("200").json({ msg: "Blogs Data", Blogs: blogs })
 
